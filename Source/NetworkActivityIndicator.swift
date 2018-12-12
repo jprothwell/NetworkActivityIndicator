@@ -32,7 +32,7 @@ public class NetworkActivityIndicator: NSObject {
             }
           
             #if os(iOS)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.async {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = (self.activitiesCount > 0)
             }
             #endif
